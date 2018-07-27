@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;MutiTriangulo&apos; to &apos;MultiTriangulo&apos;&#x0D;&#x0A;- Original element: &apos;MutiTriangulo&apos;&#x0D;&#x0A;- Renamed element: &apos;MutiTriangulo&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;MutiTriangulo&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=MutiTriangulo" name="MultiTriangulo" references="true" stamp="1532392379944" version="1.0"/>
+</session>

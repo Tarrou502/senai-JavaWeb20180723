@@ -1,48 +1,115 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: tahoma,sans-serif;
+    font-family: tahoma, sans-serif;
     box-sizing: border-box;
 }
 
-body{
-    background: #1ddced;    
+body {
+    background-color: #1ddced;
 }
 
-.chatbox{
-   width: 500px;
-   min-width:  390px;
-   background-color: #FFF;
-   padding: 25px;
-   margin: 20px auto;
-   box-shadow: 0 3px #CCC;
+.chatbox {
+    width: 500px;
+    min-width: 390px;
+    height: 600px;
+    background-color: #FFF;
+    padding: 25px;
+    margin: 20px auto;
+    box-shadow: 0 3px #CCC; 
 }
-.chatlogs{
+
+.chatlogs {
     padding: 10px;
     width: 100%;
     height: 450px;
     overflow-x: hidden;
     overflow-y: scroll;
+    
 }
-.chatlogs::-webkit-scrollbar{
-    width:10px
+
+.chatlogs::-webkit-scrollbar {
+    width: 10px;
 }
-.chatlogs::-webkit-scrollbar-thumb{
-    border-radius: 5px;
-    background: rgba(0,0,0,.1)
+
+.chatlogs::-webkit-scrollbar-thumb {
+    border-radius:  5px;
+    background: rgba(0, 0, 0, .1)
 }
-.chat{
-    display:flex;
+
+.chat {
+    display: flex;
     flex-flow: row wrap;
-    align-items: flex-statt;
+    align-items: flex-start;
     margin-bottom: 10px;
 }
 
-.chat .user-photo{
-    width:60px;
-    height:60px;
-    background: #CCC;
+.chat .user-photo {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
     border-radius: 50%;
+    overflow: hidden;
+}
 
+.chat .user-photo img {
+    width: 100%;
+}
 
+.chat .chat-message {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 10px 0;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.friend .chat-message {
+    background: #1ADDA4;
+}
+
+.self .chat-message {
+    background: #1DDCED;
+    order: -1;
+}
+
+.chat-form {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.chat-form textarea {
+    background: #FBFBFB;
+    width: 75%;
+    height: 50px;
+    border: 2px solid #EEE;
+    border-radius: 3px;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.chat-form textarea:focus {
+    background: #FFF;
+}
+
+.chat-form button {
+    background-color: #1DDCED;
+    padding: 5px 15px;
+    font-size: 30px;
+    color: #FFF;
+    border: none;
+    margin: 0 10px;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 #0EB2C1;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background: #13C8D9;
+    -webkit-transition: background .2s ease;
+    -moz-transition: background .2s ease;
 }
