@@ -1,0 +1,88 @@
+body {
+    background-color: #e8f3f8;
+    font: 1em 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: steelblue;
+}
+
+form {
+    margin: 20px auto;
+    width: 320px;
+    color: steelblue;
+}
+
+#genero {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    font-size: inherit;
+     /* Colocar depois */
+    background: #FAF6D9;
+}
+
+input:focus {
+    background-color: white;
+}
+
+input[type="radio"]:checked + label {
+    font-weight:  bold;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
+}
+
+input[type="date"] {
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
+    text-align: center;
+}
+
+input[type="password"] {
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid orange;
+}
+
+input[type="email"] {
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
+}
+
+input[type="radio"] {
+    margin: 0 8px 25px 18px;
+}
+
+input[type="radio"]:first-child {
+    margin-left: 0;
+}
+
+input[type="submit"] {
+    width: 344px;
+    height: 45px;
+    border: none;
+    background-color: steelblue;
+    color: white;
+}
+
+input[type="range"] {
+    margin-top: 0;
+    margin-bottom:  0;
+}
