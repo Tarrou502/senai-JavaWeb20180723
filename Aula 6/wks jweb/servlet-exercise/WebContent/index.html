@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Calculadora</title>
+	</head>
+	<body>
+	
+		<h1>Calculadora Básica</h1>
+		
+		<form action="calcular">
+		
+			<input id="n1" type="number" name="n1"/>
+			<label for="n1" form="">Número 1</label>
+			
+			<input type="number" name="n2" />
+			<label for="n2" form="">Número 2</label>
+			
+			<ul>
+			
+				<li>
+					<input id="cb_soma"type="radio" name="operacao" value="soma"/>
+					<label for="cb_soma">Soma</label>
+				</li>
+				<li>
+					<input id="cb_sub"type="radio" name="operacao" value="sub"/>
+					<label for="cb_sub">Subtração</label>
+				</li>
+				<li>
+					<input id="cb_div"type="radio" name="operacao" value="div"/>
+					<label for="cb_div">Divisão</label>
+				</li>
+				<li>
+					<input id="cb_mult"type="radio" name="operacao" value="mult"/>
+					<label for="cb_mult">Multiplicação</label>
+				</li> 
+			</ul>
+			
+			<input type="submit" value="Calcula, FDM!" />
+			
+		</form>
+	</body>
+</html>
