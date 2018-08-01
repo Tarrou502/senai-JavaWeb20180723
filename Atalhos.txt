@@ -1,0 +1,5 @@
+CTRL + SHILT + R  Procurar  Recursos
+
+
+CTRL + 3 digitar Project explorer  
+Explorer General - Visualizar outros recususo no New
