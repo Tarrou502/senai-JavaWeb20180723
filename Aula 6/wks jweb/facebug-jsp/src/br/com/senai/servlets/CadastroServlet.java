@@ -72,7 +72,7 @@ public class CadastroServlet extends HttpServlet {
 		request.setAttribute("op", "Cadastro");
 		
 		try {
-			RequestDispatcher dispatcher =request.getServletContext().getRequestDispatcher("WEB-INF/msg-cadstro-login.jsp");
+			RequestDispatcher dispatcher =request.getServletContext().getRequestDispatcher("/WEB-INF/msg-cadastro-login.jsp");
 			dispatcher.forward(request,response);
 		} catch (ServletException | IOException e) {
 			// TODO Auto-generated catch block

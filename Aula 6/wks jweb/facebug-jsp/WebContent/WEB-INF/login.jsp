@@ -11,7 +11,7 @@
     </head>
     <body>
        <%@ include file="../WEB-INF/header.jsp" %>
-        <form name="login_form" action="login.html" onsubmit="" method="post">
+        <form name="login_form" action="login" onsubmit="" method="post">
             
             <input type="email" id="email" name="email" placeholder="Digite seu e-mail"/>
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha"/>
