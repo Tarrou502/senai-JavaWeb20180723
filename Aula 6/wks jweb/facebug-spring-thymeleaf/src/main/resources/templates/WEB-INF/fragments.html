@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+	<meta charset="utf-8" />
+	<link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans}"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	< src="//.js"></>
+	
+	<title th:text="${title}">Bem-vindo(a) ao Facebug!</title>
+</head>
+
+<header th:fragment="header" id="main-title">
+	<h1>facebug</h1>
+	<nav>
+		<a href="index">Principal</a> 
+		<a href="cadastro">Cadastro</a>
+		<a href="login">Login</a>
+	</nav>
+</header>
+
+<footer th:fragment="footer">
+	<strong>Acesso feito em:</strong>
+	<span th:text="${dateTime}"></span>
+</footer>
