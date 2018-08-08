@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Simples cadastro JS</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        < src=".js"></>
+    </head>
+    <body>
+        <h1>Cadastro</h1>
+        <form name="formulario" action="" onsubmit="return validateForm()" method="get">
+            
+            <input type="text" id="nome" name="nome" placeholder="Nome"/>
+            <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome"/>
+            <input type="email" placeholder="Email">
+            <input type="text" id="telefone" name="telefone" placeholder="Telefone"/>
+            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Confirme a senha"/>
+
+            <section id="genero">
+                Masculino
+                <input type="range" id="genero-slider"/>
+                Feminino
+            </section>
+            <!-- <section id="genero">
+                <input type="radio" id="masculino" name="genero"/>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="genero"/>
+                <label for="feminino">Feminino</label>
+            </section> -->
+            
+            <input type="date">
+
+            <section id="termos">
+                <input id="cb-termos" type="checkbox"/>
+                <label for="cb-termos">Eu concordo com os termos</label>
+            </section>
+
+            <input type="submit" value="Vai disgraçaaaaaa"/>
+            
+        </form>
+    </body>
+</html>

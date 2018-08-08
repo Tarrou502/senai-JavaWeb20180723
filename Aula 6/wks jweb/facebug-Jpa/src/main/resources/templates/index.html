@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+
+<head th:replace="WEB-INF/fragments :: head">
+</head>
+
+<body>
+    <section id="main">
+        
+		<header th:replace="WEB-INF/fragments :: header">
+		</header>
+
+        <div id="banner">
+            <img alt="pessoas" src="img/people.jpg" />
+        </div>
+    </section>
+    
+    <footer th:replace="WEB-INF/fragments :: footer"><span th:text="${Timer.getDataHora()}"></span></footer>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Citroen</title>
+    <link rel="stylesheet" type="text/css" href="form/style.css">
+    <script type="text/javascript" src="form/form.js"></script> 
+    <!--<link rel="stylesheet" type="text/css" href="C:\workspace\workspace-senai\cad-citroen\form\style.css">
+    <script type="text/javascript" src="C:\workspace\workspace-senai\cad-citroen\form\form.js"></script>-->
+
+</head>
+
+<body>
+
+    <h1 id = "titulo_form"> Formulário de cadastro para Teste Drive Citroen</h1>\
+
+    <!-- <form id = "form_cad" action="${s:mvcUrl('PFC#gravar').build()}" method="post" commandName = "pessoaFisica"> -->
+    <form id = "form_cad" name="form" onSubmit="return validaForm();" action="cadastrar">
+
+        <div>
+            <label class ="atb_cadastro">Nome</label>
+            <input type="text" name="nome">
+           
+        </div>
+        <div class ="atb_cadastro">
+            <label>Sobrenome</label>
+            <input type="text" name = "sobrenome">
+        </div>
+        <div>
+            <label class ="atb_cadastro">Data de Nascimento</label>
+            <input type="date" name = "data">
+        </div>
+        <div class ="atb_cadastro">
+            <label>Renda Mensal</label>
+            <input type="text" name="rendaMensal">
+        </div>
+        <div id = "opcoes_carros" class ="atb_cadastro"> 
+            <label class ="atb_cadastro">Opções de Carros</label>
+            <select name= "carros">
+                <option>C3</option>
+                <option>Aircross</option>
+                <option>C4Lounge</option>
+                <option>C4Picasso</option>       
+            </select>
+                    
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+</body>
+</html>
