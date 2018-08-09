@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+	
+	<head th:replace="WEB-INF/fragments :: head">
+	</head>
+	
+    <body>
+        <header th:replace="WEB-INF/fragments :: hlogin">
+		</header>
+		<h2>Meus Dados</h2>
+        <form name="form_dados" action="atualizar" onsubmit="return validateForm()" method="post">
+               <input type="text" id="nome" name="nome" placeholder="Nome" th:value="${usuario.nome}"/>
+            <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" th:value="${usuario.sobrenome}"/>
+            <input type="email" id="email" name="email" placeholder="Email" disabled="disabled" th:value="${usuario.email}">
+            <input type="text"  id="telefone" name="telefone" placeholder="Telefone" th:value="${usuario.telefone}"/>
+            <input type="password" id="senha" name="senha" placeholder="Senha" th:value="${usuario.senha}">
+            <input type="password" placeholder="Confirme a senha" th:value="${usuario.senha}"/>
+
+            <section id="genero">
+                Masculino
+                <input type="range" id="genero" name="genero" th:value="${usuario.genero}"/>
+                Feminino
+            </section>
+
+            <input type="date" id="data-nascimento" name="dataNascimento" th:value="${usuario.dataNascimento}">
+
+            <input type="submit" value="Quer mudar?"/>
+            
+        </form>
+    </body>
+</html>

@@ -11,12 +11,22 @@
 	<title th:text="${title}">Bem-vindo(a) ao Facebug!</title>
 </head>
 
-<header th:fragment="header" id="main-title">
+<header th:fragment="hprincipal" id="main-title">
 	<h1>facebug</h1>
 	<nav>
 		<a href="index">Principal</a> 
 		<a href="cadastro">Cadastro</a>
 		<a href="login">Login</a>
+	</nav>
+</header>
+
+<header th:fragment="hlogin" id="main-title">
+	<h1>facebug</h1>
+	<nav>
+		<a href="index">Principal</a> 
+		<a href="meus-dados">Meus Dados</a>
+		<a href="minha-conta">Minha Conta</a>
+		<a href="logoff">Logoff</a>
 	</nav>
 </header>
 

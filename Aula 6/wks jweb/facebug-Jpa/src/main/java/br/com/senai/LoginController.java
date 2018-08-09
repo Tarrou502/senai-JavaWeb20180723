@@ -27,8 +27,10 @@ public class LoginController {
 		
 		if (usuarioRecuperado.getEmail().equals(email)  && usuarioRecuperado.getSenha().equals(senha)) {
 			
-			model.addAttribute("mensagem", "Bem-veindo," + email);
-			return "/WEB-INF/msg-cadastro-login";
+			UsuarioAtivoUtils.usuario = usuarioRecuperado;
+			
+			model.addAttribute("usuario",usuarioRecuperado);
+			return "/WEB-INF/meus-dados";
 			
 		} else {
 			model.addAttribute("mensagem", "Houve um erro durante o login ");

@@ -8,18 +8,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping(value = "/cadastro")
 public class CadastroController {
 
 	@Autowired
 	private UsuarioDAO usuarioDAO;
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping( value ="/cadastro", method = RequestMethod.GET)
 	public String cadastrar() {
 		return "/WEB-INF/cadastro";
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping( value="/cadastro", method = RequestMethod.POST)
 	public String cadastrar(Usuario usuario,
 			@RequestParam(name = "termos", defaultValue = "false") Boolean usuarioConcordou, Model model) {
 
@@ -42,5 +41,34 @@ public class CadastroController {
 			return "/WEB-INF/msg-cadastro-login";
 		}
 	}
+	
+	@RequestMapping(value="/atualizar", method = RequestMethod.POST)
+	public String atualizar(Usuario usuario,Model model) {	
+		usuario.setEmail(UsuarioAtivoUtils.usuario.getEmail());
+		Usuario retornado =usuarioDAO.save(usuario);
+		if (retornado != null) {
+		    model.addAttribute("mensagem", "Atualização realizado com sucesso!");		
+		}
+		else
+			model.addAttribute("mensagem", "Erro na atualização!");
+			
+		
+		return "/WEB-INF/msg-cadastro-login";
+		
+	}
+	
+	@RequestMapping( value ="/minha-conta", method = RequestMethod.GET)
+	public String minhaconta() {
+		
+		return "/WEB-INF/minha-conta";
+	}
+	
 
+	@RequestMapping( value ="/apagar", method = RequestMethod.GET)
+	public String apagar(Model model) {
+		
+		usuarioDAO.delete(UsuarioAtivoUtils.usuario);
+		model.addAttribute("mensagem","Sua conta foi apagada com sucesso");
+		return "/WEB-INF/msg-cadastro-login";
+	}
 }
